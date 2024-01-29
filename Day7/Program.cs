@@ -103,24 +103,24 @@ int CompareHands(string hand1, string hand2, bool wildCard)
     }
 
     return 1;
-}
 
-int CardStrength(char card, bool wildCard) => card switch
-{
-    'A' => 13,
-    'K' => 12,
-    'Q' => 11,
-    'J' => wildCard ? 0 : 10,
-    'T' => 9,
-    '9' => 8,
-    '8' => 7,
-    '7' => 6,
-    '6' => 5,
-    '5' => 4,
-    '4' => 3,
-    '3' => 2,
-    '2' => 1
-};
+    int CardStrength(char card, bool wildCard) => card switch
+    {
+        'A' => 13,
+        'K' => 12,
+        'Q' => 11,
+        'J' => wildCard ? 0 : 10,
+        'T' => 9,
+        '9' => 8,
+        '8' => 7,
+        '7' => 6,
+        '6' => 5,
+        '5' => 4,
+        '4' => 3,
+        '3' => 2,
+        '2' => 1
+    };
+}
 
 int HandStrength(string cards)
 {
